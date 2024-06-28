@@ -1,0 +1,11 @@
+.circle
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.github
+{
+    background: rgb(0, 145, 255);
+}

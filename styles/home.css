@@ -1,0 +1,39 @@
+.main
+{
+    padding: 20px 20px;
+    z-index: 4;
+}
+
+
+.links
+{
+    margin-top: 30px;
+}
+
+.links a
+{
+    color: white;
+    text-underline-offset: 3px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.home-img
+{
+    height: 100px;
+    transition: transform 0.3s ease-out; /* Added transition effect */
+}
+
+@keyframes animate { 
+    0% { 
+        letter-spacing: -15px; 
+    } 
+
+    20% { 
+        letter-spacing: 10px; 
+    } 
+
+    100% { 
+        letter-spacing: 0; 
+    } 
+} 

@@ -1,0 +1,64 @@
+.no-cursor #circularcursor {
+    display: none;
+  }
+#circularcursor {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+    transition: 0.08s;
+    pointer-events: none;
+  }
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.bubbles span {
+    transform: translate3d(115em, 0, 0);
+    pointer-events: none;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: blueviolet;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px rgb(165, 68, 255), 0 0 50px rgb(137, 43, 226), 0 0 100px blueviolet;
+    animation: fall linear infinite;
+    top: 0;
+    transform: translateY(-100vh);
+    left: calc(var(--i) * 5%);
+    animation-duration: calc(5s + (var(--i) * 0.5s));
+    animation-delay: calc(var(--i) * -0.25s);   
+}
+
+.bubbles span:nth-child(even) {
+    background: rgb(203, 91, 255);
+    box-shadow: 0 0 5px 5px rgb(168, 43, 226), 0 0 50px rgb(177, 94, 255), 0 0 100px rgb(168, 43, 226);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) scale(1);
+    }
+    100% {
+        transform: translateY(100vh) scale(0);
+    }
+}

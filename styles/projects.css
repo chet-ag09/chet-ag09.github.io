@@ -1,0 +1,45 @@
+.projects
+{
+    overflow-y: scroll;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.project-card
+{
+    height: 150px;
+    width: 500px;
+    margin: auto auto;
+    background: blueviolet;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 0 16px 0 blueviolet;
+    transition: 1s ease-in-out;
+    text-align: left;
+    overflow: hidden;
+}
+
+.project-card:hover
+{
+    background: linear-gradient(135deg, #000000, #0f141c);
+}
+
+
+@keyframes scroll-ani
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+
+    50%
+    {
+        transform: translateY(10px);
+    }
+}
+
+.ani{
+    animation: scroll-ani 1s infinite;
+    text-align: center;
+    margin-bottom: 20px;
+}

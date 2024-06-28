@@ -1,0 +1,154 @@
+.center {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.stack-area {
+    width: 100%;
+    height: 300vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.right,
+.left {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  flex-basis: 50%;
+}
+  .cards {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+.card {
+   width: 350px;
+   height: 350px;
+   box-sizing: border-box;
+   padding: 35px;
+   border-radius: 6mm;
+   display: flex;
+   justify-content: space-between;
+   overflow: hidden;
+   flex-direction: column;
+   position: absolute;
+   top: 50%;
+  left: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  right: -40px;
+  background: linear-gradient(135deg, #000000, #384c6c);
+  height: 50px;
+  width: 50px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(28);
+}
+
+
+.card:hover
+{
+  width: 360px;
+  height: 360px;
+}
+.card:nth-child(1) {
+  background: 	#bb00ff;
+  box-shadow: 0 0 16px 0 #bb00ff;
+  z-index: 4;
+}
+.card:nth-child(2) {
+  background: #7f54ff;
+  box-shadow: 0 0 16px 0 #7f54ff;
+  z-index: 3;
+}
+.card:nth-child(3) {
+  background: 	#bb00ff;
+  z-index: 2;
+  box-shadow: 0 0 16px 0 #bb00ff;
+}
+.card:nth-child(4) {
+  background: #7f54ff;
+  z-index: 1;
+  box-shadow: 0 0 16px 0 #7f54ff;
+}
+.sub {
+  font-family: "noto sans";
+  font-size: 25px;
+  font-weight: 700;
+  color: #000000;
+
+}
+.content {
+  font-family: "noto sans";
+  font-weight: 800;
+}
+.card.active {
+  transform-origin: bottom left;
+}
+
+.left {
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  width: 420px;
+  font-size: 84px;
+  font-family: "noto sans";
+  font-weight: 700;
+  line-height: 88px;
+}
+.sub-title {
+  width: 420px;
+  font-family: "noto sans";
+  font-size: 14px;
+  margin-top: 30px;
+}
+.sub-title button {
+  font-family: "noto sans";
+  font-size: 14px;
+  padding: 15px 30px;
+  background: black;
+  color: white;
+  border-radius: 8mm;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.top,
+.bottom {
+  width: 100%;
+  height: 100vh;
+  font-family: "noto sans";
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*CSS Code for responsiveness*/
+@media screen and (max-width: 800px) {
+  .left {
+    position: relative;
+    width: 100vw;
+  }
+}
+

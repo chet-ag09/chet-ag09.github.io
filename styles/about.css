@@ -1,0 +1,106 @@
+.typing-container {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid blueviolet;
+    white-space: nowrap;
+    margin: 25px 0;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.typing-effect {
+    display: inline;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: blueviolet; }
+}
+
+.typing-container {
+    animation: blink-caret .75s step-end infinite;
+}
+
+.fade {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Transition animation */
+  }
+  
+.fade.in-view {
+  opacity: 1; /* Visible after transition */
+}
+
+.me {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    margin-bottom: 200px;
+}
+
+/* Change the opacity to 1 when it's visible */
+.me.show {
+    opacity: 1;
+}
+
+.big-p
+{
+    margin-top: 250px;
+    font-size: 2em;
+    animation: fall-down 1s infinite;
+}
+
+@keyframes fall-down
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+
+    50%
+    {
+        transform: translateY(10px);
+    }
+}
+
+.box {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: var(--main-color);
+}
+
+.circular-text {
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    display: inline-block;
+    transform-origin: center;
+}
+
+.text {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    display: inline-block;
+    transform-origin: center;
+}
+
+
+.about
+{
+    background: blueviolet;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .typing-effect
+    {
+        font-size: 3em;
+    }
+}
